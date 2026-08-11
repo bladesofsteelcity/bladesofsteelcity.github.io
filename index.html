@@ -735,6 +735,7 @@ p{margin:0}
     <p class="kicker">Sponsorship</p>
     <h2 style="font-size:var(--text-2xl);color:var(--white);max-width:16ch">Put Your Brand on the Boards.</h2>
     <p class="muted" style="margin-top:1rem;max-width:60ch">Sponsorship underwrites the ice, the jerseys, and the reception — which means more of every dollar raised reaches the nonprofits we support. Most levels include skater spots, so your team plays and your brand shows.</p>
+    <p class="muted" style="margin-top:.75rem;max-width:60ch">Every level below checks out on the same registration page &mdash; select your sponsorship there.</p>
 
     <div class="tiers">
       <div class="tier tier--top">
@@ -926,9 +927,9 @@ p{margin:0}
   <div class="wrap">
     <p class="kicker kicker--center">Registration</p>
     <h2>Claim Your Ice Time</h2>
-    <p>Player registration and sponsorships are processed through our secure payment portal. Spots are limited by available ice — first paid, first confirmed.</p>
-    <p style="margin-top:.9rem">Players must have <strong style="color:#fff">current or past ice hockey experience</strong>
-    and bring <strong style="color:#fff">full equipment</strong>. Games are 20-minute single periods under adult league rules.</p>
+    <p>Player registration and every sponsorship level are handled on the same page &mdash; you choose which one you are completing once you get there. Spots are limited by available ice &mdash; first paid, first confirmed.</p>
+    <p style="margin-top:.9rem">Players must have <strong style="color:#000">current or past ice hockey experience</strong>
+    and bring <strong style="color:#000">full equipment</strong>. Games are 20-minute single periods under adult league rules.</p>
     <div class="register__cta">
       <a class="btn btn--dark" href="#" data-link="player">Register as a Player</a>
       <a class="btn btn--outline-dark" href="#sponsors">Choose a Sponsorship</a>
@@ -986,13 +987,20 @@ p{margin:0}
    Any link you leave empty ("") automatically disables its button and
    shows a "coming soon" state — so you can go live one link at a time.
    ===================================================================== */
+/* Player registration AND every sponsorship level go to one portal.
+   Visitors pick what they are signing up for once they arrive.
+   To change the destination, edit this one line: */
+const REGISTRATION_URL = "https://marcellus-utica-gas.com/bladesofsteelcity";
+
+/* If a level ever needs its own separate link, replace REGISTRATION_URL
+   on that line with a different web address in quotation marks. */
 const LINKS = {
-  player:  "",   // Player Registration
-  cup:     "",   // The Cup — $8,000
-  crispy:  "",   // Crispy Sweaters — $4,000
-  biscuit: "",   // Biscuit Backer — $2,500
-  clean:   "",   // Clean Sheet — $1,000
-  icing:   ""    // Icing (Bar/Food) — $500
+  player:  REGISTRATION_URL,   // Player Registration
+  cup:     REGISTRATION_URL,   // The Cup — $8,000
+  crispy:  REGISTRATION_URL,   // Crispy Sweaters — $4,000
+  biscuit: REGISTRATION_URL,   // Biscuit Backer — $2,500
+  clean:   REGISTRATION_URL,   // Clean Sheet — $1,000
+  icing:   REGISTRATION_URL    // Icing (Bar/Food) — $500
 };
 
 /* --- wire every button to its link --- */
@@ -1014,7 +1022,7 @@ const LINKS = {
   });
   var note = document.getElementById('reg-note');
   if (note && LINKS.player) {
-    note.textContent = 'Secure payment processed through our registration partner.';
+    note.textContent = 'Payment is processed securely by our registration partner.';
   }
 })();
 
