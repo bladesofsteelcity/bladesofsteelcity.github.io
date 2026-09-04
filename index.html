@@ -377,6 +377,9 @@ p{margin:0}
 .wall--lg .wall__open{min-height:124px}
 .wall--md .wall__open{min-height:104px}
 .wall--sm .wall__open{min-height:88px}
+/* ultra-wide wordmarks (14:1 etc) need two columns to stay legible */
+.wall--sm a.wall--wide{grid-column:span 2}
+.wall--sm a{padding:1.2rem 1rem}
 
 /* ---------- Bracket table ---------- */
 .bracket-wrap{margin-top:2.2rem;overflow-x:auto;-webkit-overflow-scrolling:touch;
@@ -775,7 +778,7 @@ p{margin:0}
       <div class="tier">
         <div class="tier__name">Biscuit Backer</div>
         <div class="tier__price">$2,500</div>
-        <div class="tier__avail">1 available</div>
+        <div class="tier__avail" style="color:rgba(255,255,255,.6)">Sold out</div>
         <ul>
           <li>Your logo on the game pucks</li>
           <li>2 skaters</li>
@@ -808,7 +811,7 @@ p{margin:0}
         <div class="tier__name">Icing</div>
         <div class="tier__sub">Bar &amp; Food Sponsor</div>
         <div class="tier__price">$500</div>
-        <div class="tier__avail">7 available</div>
+        <div class="tier__avail">6 available</div>
         <ul>
           <li>Logo displayed at the bar and food area</li>
           <li>Name on event shirt</li>
@@ -882,10 +885,12 @@ p{margin:0}
     <div class="wall-group">
       <div class="wall-group__head">
         <span class="wall-group__name">Biscuit Backer</span>
-        <span class="wall-group__amt">$2,500 &middot; 1 spot</span>
+        <span class="wall-group__amt">$2,500 &middot; Fully subscribed</span>
       </div>
       <div class="wall wall--md">
-        <a class="wall__open" href="#sponsors">Your Logo Here</a>
+        <a href="https://atwell.com" target="_blank" rel="noopener" title="Atwell, LLC">
+          <img src="assets/sponsors/atwell.png" alt="Atwell, LLC">
+        </a>
       </div>
     </div>
 
@@ -907,10 +912,10 @@ p{margin:0}
     <div class="wall-group">
       <div class="wall-group__head">
         <span class="wall-group__name">Icing</span>
-        <span class="wall-group__amt">$500 &middot; 7 spots remaining</span>
+        <span class="wall-group__amt">$500 &middot; 6 spots remaining</span>
       </div>
       <div class="wall wall--sm">
-        <a href="https://www.bakerhughes.com" target="_blank" rel="noopener" title="Baker Hughes">
+        <a class="wall--wide" href="https://www.bakerhughes.com" target="_blank" rel="noopener" title="Baker Hughes">
           <img src="assets/sponsors/baker-hughes.png" alt="Baker Hughes">
         </a>
         <a href="https://www.colterenergy.com" target="_blank" rel="noopener" title="Colter Energy">
@@ -919,7 +924,9 @@ p{margin:0}
         <a href="https://aesfluids.com" target="_blank" rel="noopener" title="AES Drilling Fluids">
           <img src="assets/sponsors/aes-drilling-fluids.png" alt="AES Drilling Fluids">
         </a>
-        <a class="wall__open" href="#sponsors">Your Logo Here</a>
+        <a class="wall--wide" href="https://www.halliburton.com" target="_blank" rel="noopener" title="Halliburton">
+          <img src="assets/sponsors/halliburton.png" alt="Halliburton">
+        </a>
         <a class="wall__open" href="#sponsors">Your Logo Here</a>
         <a class="wall__open" href="#sponsors">Your Logo Here</a>
         <a class="wall__open" href="#sponsors">Your Logo Here</a>
