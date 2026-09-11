@@ -379,6 +379,9 @@ p{margin:0}
 .wall--sm .wall__open{min-height:88px}
 /* ultra-wide wordmarks (14:1 etc) need two columns to stay legible */
 .wall--sm a.wall--wide{grid-column:span 2}
+/* Square or shield-shaped marks fill far more area than a wordmark at the
+   same width, so cap their height to keep tiles optically balanced. */
+.wall a.wall--badge img{max-height:84px}
 .wall--sm a{padding:1.2rem 1rem}
 
 /* ---------- Bracket table ---------- */
@@ -761,7 +764,7 @@ p{margin:0}
       <div class="tier">
         <div class="tier__name">Crispy Sweaters</div>
         <div class="tier__price">$4,000</div>
-        <div class="tier__avail">1 available &middot; 2 more may open</div>
+        <div class="tier__avail" style="color:rgba(255,255,255,.6)">Sold out</div>
         <ul>
           <li>Custom team jersey</li>
           <li>2 skaters</li>
@@ -871,13 +874,15 @@ p{margin:0}
     <div class="wall-group">
       <div class="wall-group__head">
         <span class="wall-group__name">Crispy Sweaters</span>
-        <span class="wall-group__amt">$4,000 &middot; 1 spot remaining &middot; 2 more may open</span>
+        <span class="wall-group__amt">$4,000 &middot; Fully subscribed</span>
       </div>
       <div class="wall wall--lg">
         <a href="https://www.austinhose.com" target="_blank" rel="noopener" title="Austin Hose">
           <img src="assets/sponsors/austin-hose.png" alt="Austin Hose">
         </a>
-        <a class="wall__open" href="#sponsors">Your Logo Here</a>
+        <a class="wall--badge" href="https://deepwellservices.com" target="_blank" rel="noopener" title="Deep Well Services">
+          <img src="assets/sponsors/deep-well-services.png" alt="Deep Well Services">
+        </a>
       </div>
     </div>
 
@@ -890,9 +895,6 @@ p{margin:0}
       <div class="wall wall--md">
         <a href="https://atwell.com" target="_blank" rel="noopener" title="Atwell, LLC">
           <img src="assets/sponsors/atwell.png" alt="Atwell, LLC">
-        </a>
-        <a href="https://deepwellservices.com" target="_blank" rel="noopener" title="Deep Well Services">
-          <img src="assets/sponsors/deep-well-services.png" alt="Deep Well Services">
         </a>
       </div>
     </div>
