@@ -379,9 +379,10 @@ p{margin:0}
 .wall--sm .wall__open{min-height:88px}
 /* ultra-wide wordmarks (14:1 etc) need two columns to stay legible */
 .wall--sm a.wall--wide{grid-column:span 2}
-/* Square or shield-shaped marks fill far more area than a wordmark at the
-   same width, so cap their height to keep tiles optically balanced. */
-.wall a.wall--badge img{max-height:84px}
+/* Chunky marks (square badges, or logos with a stacked sub-banner) fill far
+   more area than a plain wordmark at the same width. Cap their height so every
+   tile in a row reads at a comparable visual weight. */
+.wall a.wall--capped img{max-height:84px}
 .wall--sm a{padding:1.2rem 1rem}
 
 /* ---------- Bracket table ---------- */
@@ -822,7 +823,7 @@ p{margin:0}
         <div class="tier__name">Icing</div>
         <div class="tier__sub">Bar &amp; Food Sponsor</div>
         <div class="tier__price">$500</div>
-        <div class="tier__avail">5 available</div>
+        <div class="tier__avail">4 available</div>
         <ul>
           <li>Logo displayed at the bar and food area</li>
           <li>Name on event shirt</li>
@@ -888,7 +889,7 @@ p{margin:0}
         <a href="https://www.austinhose.com" target="_blank" rel="noopener" title="Austin Hose">
           <img src="assets/sponsors/austin-hose.png" alt="Austin Hose">
         </a>
-        <a class="wall--badge" href="https://deepwellservices.com" target="_blank" rel="noopener" title="Deep Well Services">
+        <a class="wall--capped" href="https://deepwellservices.com" target="_blank" rel="noopener" title="Deep Well Services">
           <img src="assets/sponsors/deep-well-services.png" alt="Deep Well Services">
         </a>
       </div>
@@ -925,7 +926,7 @@ p{margin:0}
     <div class="wall-group">
       <div class="wall-group__head">
         <span class="wall-group__name">Icing</span>
-        <span class="wall-group__amt">$500 &middot; 5 spots remaining</span>
+        <span class="wall-group__amt">$500 &middot; 4 spots remaining</span>
       </div>
       <div class="wall wall--sm">
         <a class="wall--wide" href="https://www.bakerhughes.com" target="_blank" rel="noopener" title="Baker Hughes">
@@ -943,7 +944,9 @@ p{margin:0}
         <a class="wall--wide" href="https://www.rangeresources.com" target="_blank" rel="noopener" title="Range Resources">
           <img src="assets/sponsors/range-resources.png" alt="Range Resources">
         </a>
-        <a class="wall__open" href="#sponsors">Your Logo Here</a>
+        <a class="wall--wide wall--capped" href="https://lightningenergyservices.com" target="_blank" rel="noopener" title="Lightning Energy Services">
+          <img src="assets/sponsors/lightning-energy.png" alt="Lightning Energy Services">
+        </a>
         <a class="wall__open" href="#sponsors">Your Logo Here</a>
         <a class="wall__open" href="#sponsors">Your Logo Here</a>
         <a class="wall__open" href="#sponsors">Your Logo Here</a>
