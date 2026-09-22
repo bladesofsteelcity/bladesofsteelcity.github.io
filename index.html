@@ -134,6 +134,7 @@ p{margin:0}
   font-size:.95rem;line-height:1.05;letter-spacing:.01em;color:var(--white)}
 .brand__txt span{display:block;color:var(--gold);font-size:.68rem;letter-spacing:.16em}
 .nav{display:flex;align-items:center;gap:1.55rem}
+@media (max-width:1240px){.nav{gap:1.05rem}.nav .btn{padding:.7rem 1rem}}
 .nav a{font-size:var(--text-sm);font-weight:500;text-decoration:none;color:#cfd5dc;
   letter-spacing:.03em;transition:color .15s;white-space:nowrap}
 .nav a:hover{color:var(--gold)}
@@ -364,6 +365,26 @@ p{margin:0}
 .wall--md a,.wall--md .wall__tile{min-height:104px}
 .wall--sm a,.wall--sm .wall__tile{min-height:88px}
 .wall a:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.5)}
+
+/* ---------- 2026 JERSEYS ---------- */
+.jerseys{display:grid;gap:1.6rem 1.8rem;margin-top:2.4rem;
+  grid-template-columns:repeat(2,1fr)}
+@media (max-width:760px){.jerseys{grid-template-columns:1fr}}
+.jersey{margin:0}
+/* Light plate: several sweaters are black or charcoal and would vanish
+   against the ink background, so every design sits on the same white
+   surface used by the sponsor wall. */
+.jersey__plate{background:#fff;border-radius:12px;padding:1rem .9rem;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .2s cubic-bezier(.16,1,.3,1),box-shadow .2s}
+.jersey:hover .jersey__plate{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.jersey__plate img{width:100%;height:auto;display:block}
+.jersey figcaption{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;
+  margin-top:.95rem;padding-top:.7rem;border-top:1px solid var(--line-soft)}
+.jersey__team{font-family:var(--font-display);font-size:1.15rem;color:var(--white)}
+.jersey__note{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--steel-dim);font-weight:700}
+
 .wall img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
 .wall a.wall__open{
   display:flex;align-items:center;justify-content:center;text-align:center;
@@ -451,6 +472,7 @@ p{margin:0}
       <a href="#events">Events</a>
       <a href="#impact">Impact</a>
       <a href="#schedule">Game Day</a>
+      <a href="#jerseys">Jerseys</a>
       <a href="#sponsors">Sponsorship</a>
       <a href="#partners">Our Sponsors</a>
       <a href="#contact">Contact</a>
@@ -740,6 +762,39 @@ p{margin:0}
   </div>
 </section>
 
+<!-- ===================== 2026 JERSEYS =====================
+     One sweater per team. Swap the .webp files in assets/jerseys/
+     to update a design; keep them transparent so the white plate shows.
+========================================================== -->
+<section class="section jerseys-sec reveal" id="jerseys">
+  <div class="wrap">
+    <p class="kicker">2026 Jerseys</p>
+    <h2 style="font-size:var(--text-2xl);color:var(--white);max-width:16ch">This Year&rsquo;s Sweaters.</h2>
+    <p class="muted" style="margin-top:1rem;max-width:62ch">Four teams, four original designs &mdash; drawn for us by <strong style="color:var(--white)">VC2Art</strong>, a Pittsburgh artist. Every sweater carries the Blades of Steel City crest on both shoulders. Yours is handed to you at check-in and it is yours to keep.</p>
+
+    <div class="jerseys">
+      <figure class="jersey">
+        <div class="jersey__plate"><img src="assets/jerseys/nextier.webp" alt="NexTier team jersey &mdash; black with green and white striping, NexTier mark on the chest" loading="lazy" width="1600" height="792"></div>
+        <figcaption><span class="jersey__team">NexTier</span><span class="jersey__note">Front &amp; Back</span></figcaption>
+      </figure>
+      <figure class="jersey">
+        <div class="jersey__plate"><img src="assets/jerseys/cnx.webp" alt="CNX team jersey &mdash; light blue with grey and white striping, CNX wordmark on the chest" loading="lazy" width="1600" height="792"></div>
+        <figcaption><span class="jersey__team">CNX</span><span class="jersey__note">Front &amp; Back</span></figcaption>
+      </figure>
+      <figure class="jersey">
+        <div class="jersey__plate"><img src="assets/jerseys/austin-hose.webp" alt="Austin Hose team jersey &mdash; gold and black with the Austin Hose mask crest on the chest" loading="lazy" width="1600" height="792"></div>
+        <figcaption><span class="jersey__team">Austin Hose</span><span class="jersey__note">Front &amp; Back</span></figcaption>
+      </figure>
+      <figure class="jersey">
+        <div class="jersey__plate"><img src="assets/jerseys/deep-well-services.webp" alt="Deep Well Services team jersey &mdash; grey, black, red, and gold with the Deep Well Services shield on the chest" loading="lazy" width="1600" height="793"></div>
+        <figcaption><span class="jersey__team">Deep Well Services</span><span class="jersey__note">Front &amp; Back</span></figcaption>
+      </figure>
+    </div>
+
+    <p class="muted" style="margin-top:2rem;max-width:62ch"><strong style="color:var(--white)">Want one of your own?</strong> Individual jerseys are available for purchase. Reach out to Jon Lucsko at <a href="mailto:bladesofsteelcity@gmail.com" style="color:var(--gold)">bladesofsteelcity@gmail.com</a> and we&rsquo;ll get you sorted.</p>
+  </div>
+</section>
+
 <!-- ===================== SPONSORSHIP =====================
      EDIT TIERS HERE — each .tier block is one sponsorship level.
      Each tier's checkout link is set in the LINKS object at the
@@ -997,6 +1052,7 @@ p{margin:0}
           <li><a href="#events">2027 — Odessa, TX (Twig &amp; Puck)</a></li>
           <li><a href="#impact">Past Events &amp; Impact</a></li>
           <li><a href="#schedule">Game Day Schedule</a></li>
+          <li><a href="#jerseys">2026 Jerseys</a></li>
           <li><a href="#sponsors">Sponsorship Levels</a></li>
           <li><a href="#partners">Our Sponsors</a></li>
           <li><a href="#register">Register</a></li>
