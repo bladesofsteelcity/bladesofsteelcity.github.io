@@ -120,6 +120,10 @@ p{margin:0}
 .btn--dark{background:#0a0a0a;color:var(--gold);border-color:#0a0a0a}
 .btn--dark:hover{background:#1a1a1a;border-color:#1a1a1a;transform:translateY(-2px)}
 .btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed;transform:none!important}
+/* Closed-state button: looks like a button, does nothing, is not focusable. */
+.btn--closed{background:transparent;color:var(--steel);border-color:#2f353c;cursor:default;pointer-events:none}
+.hero__closed{margin-top:1.1rem;font-size:var(--text-sm);color:var(--steel);letter-spacing:.02em}
+.hero__closed strong{color:var(--gold);font-weight:700}
 
 /* --- header --- */
 .header{
@@ -476,7 +480,7 @@ p{margin:0}
       <a href="#sponsors">Sponsorship</a>
       <a href="#partners">Our Sponsors</a>
       <a href="#contact">Contact</a>
-      <a class="btn btn--gold" href="#register">Register</a>
+      <a class="btn btn--gold" href="#schedule">See You Nov 12</a>
     </nav>
   </div>
 </header>
@@ -509,9 +513,10 @@ p{margin:0}
     </dl>
 
     <div class="hero__cta">
-      <a class="btn btn--gold" href="#" data-link="player">Register as a Player</a>
-      <a class="btn btn--ghost" href="#sponsors">Become a Sponsor</a>
+      <a class="btn btn--gold" href="#schedule">Game Day Schedule</a>
+      <a class="btn btn--ghost" href="#jerseys">See the Jerseys</a>
     </div>
+    <p class="hero__closed"><strong>Registration and sponsorship are closed</strong> for the 2026 tournament. Thank you to everyone who signed up.</p>
   </div>
 </section>
 
@@ -577,7 +582,7 @@ p{margin:0}
     <div class="cards">
       <!-- 2026 PITTSBURGH -->
       <article class="card card--live">
-        <span class="tag tag--gold">Registration Open</span>
+        <span class="tag">Registration Closed</span>
         <h3>Blades of Steel City 2026</h3>
         <p class="card__city">Pittsburgh · Appalachian Basin</p>
         <dl>
@@ -590,7 +595,7 @@ p{margin:0}
           <div><dt>After</dt><dd>Reception next door at Bubba's</dd></div>
         </dl>
         <div class="card__foot">
-          <a class="btn btn--gold" href="#" data-link="player">Register as a Player</a>
+          <a class="btn btn--gold" href="#schedule">Game Day Schedule</a>
         </div>
       </article>
 
@@ -805,7 +810,7 @@ p{margin:0}
     <p class="kicker">Sponsorship</p>
     <h2 style="font-size:var(--text-2xl);color:var(--white);max-width:16ch">Put Your Brand on the Boards.</h2>
     <p class="muted" style="margin-top:1rem;max-width:60ch">Sponsorship underwrites the ice, the jerseys, and the reception — which means more of every dollar raised reaches the nonprofits we support. Most levels include skater spots, so your team plays and your brand shows.</p>
-    <p class="muted" style="margin-top:.75rem;max-width:60ch">Every level below checks out on the same registration page &mdash; select your sponsorship there.</p>
+    <p class="muted" style="margin-top:.75rem;max-width:60ch"><strong style="color:var(--gold)">Sponsorship for the 2026 tournament is closed.</strong> Thank you to every company that stepped up &mdash; see them all in <a href="#partners" style="color:var(--gold)">Our Sponsors</a> below.</p>
 
     <div class="tiers">
       <div class="tier tier--top">
@@ -821,7 +826,7 @@ p{margin:0}
           <li>Shoutout at the event and on social media</li>
         </ul>
         <div class="tier__foot">
-          <a class="btn btn--gold btn--sm" href="#" data-link="cup">Sponsor The Cup</a>
+          <span class="btn btn--closed btn--sm">Sponsorship Closed</span>
         </div>
       </div>
 
@@ -838,7 +843,7 @@ p{margin:0}
           <li>Social media shoutout</li>
         </ul>
         <div class="tier__foot">
-          <a class="btn btn--ghost btn--sm" href="#" data-link="crispy">Sponsor This Level</a>
+          <span class="btn btn--closed btn--sm">Sponsorship Closed</span>
         </div>
       </div>
 
@@ -855,14 +860,14 @@ p{margin:0}
           <li>Social media shoutout</li>
         </ul>
         <div class="tier__foot">
-          <a class="btn btn--ghost btn--sm" href="#" data-link="biscuit">Sponsor This Level</a>
+          <span class="btn btn--closed btn--sm">Sponsorship Closed</span>
         </div>
       </div>
 
       <div class="tier">
         <div class="tier__name">Clean Sheet</div>
         <div class="tier__price">$1,000</div>
-        <div class="tier__avail">1 available</div>
+        <div class="tier__avail" style="color:rgba(255,255,255,.6)">Closed</div>
         <ul>
           <li>Name on event banner</li>
           <li>Name on event shirt</li>
@@ -870,7 +875,7 @@ p{margin:0}
           <li>Social media shoutout</li>
         </ul>
         <div class="tier__foot">
-          <a class="btn btn--ghost btn--sm" href="#" data-link="clean">Sponsor This Level</a>
+          <span class="btn btn--closed btn--sm">Sponsorship Closed</span>
         </div>
       </div>
 
@@ -878,7 +883,7 @@ p{margin:0}
         <div class="tier__name">Icing</div>
         <div class="tier__sub">Bar &amp; Food Sponsor</div>
         <div class="tier__price">$500</div>
-        <div class="tier__avail">4 available</div>
+        <div class="tier__avail" style="color:rgba(255,255,255,.6)">Closed</div>
         <ul>
           <li>Logo displayed at the bar and food area</li>
           <li>Name on event shirt</li>
@@ -886,13 +891,12 @@ p{margin:0}
           <li>Social media shoutout</li>
         </ul>
         <div class="tier__foot">
-          <a class="btn btn--ghost btn--sm" href="#" data-link="icing">Sponsor This Level</a>
+          <span class="btn btn--closed btn--sm">Sponsorship Closed</span>
         </div>
       </div>
     </div>
 
     <div class="sponsor-note">
-      <p><strong>More spots may open.</strong> Availability is set by the four-team bracket. If enough players sign up to add a fifth or sixth team, additional Crispy Sweaters spots will open — email us to get on the waitlist.</p>
         <p><strong>Skater spots are included.</strong> The Cup brings four skaters, and Crispy Sweaters and Biscuit Backer each bring two — so your sponsorship puts your people on the ice, not just your logo on a banner.</p>
       <p style="margin-top:.75rem"><strong>In-kind and raffle donations welcome.</strong> Equipment, gift cards, suite tickets, and services all help. <a href="#contact" style="color:var(--gold)">Reach out</a> and we'll build a package that fits.</p>
     </div>
@@ -967,13 +971,12 @@ p{margin:0}
     <div class="wall-group">
       <div class="wall-group__head">
         <span class="wall-group__name">Clean Sheet</span>
-        <span class="wall-group__amt">$1,000 &middot; 1 spot remaining</span>
+        <span class="wall-group__amt">$1,000 &middot; Closed</span>
       </div>
       <div class="wall wall--md">
         <a href="https://e3team.com" target="_blank" rel="noopener" title="E3 Company">
           <img src="assets/sponsors/e3.png" alt="E3 Company">
         </a>
-        <a class="wall__open" href="#sponsors">Your Logo Here</a>
       </div>
     </div>
 
@@ -981,7 +984,7 @@ p{margin:0}
     <div class="wall-group">
       <div class="wall-group__head">
         <span class="wall-group__name">Icing</span>
-        <span class="wall-group__amt">$500 &middot; 4 spots remaining</span>
+        <span class="wall-group__amt">$500 &middot; Closed</span>
       </div>
       <div class="wall wall--sm">
         <a class="wall--wide" href="https://www.bakerhughes.com" target="_blank" rel="noopener" title="Baker Hughes">
@@ -1002,10 +1005,6 @@ p{margin:0}
         <a class="wall--wide wall--capped" href="https://lightningenergyservices.com" target="_blank" rel="noopener" title="Lightning Energy Services">
           <img src="assets/sponsors/lightning-energy.png" alt="Lightning Energy Services">
         </a>
-        <a class="wall__open" href="#sponsors">Your Logo Here</a>
-        <a class="wall__open" href="#sponsors">Your Logo Here</a>
-        <a class="wall__open" href="#sponsors">Your Logo Here</a>
-        <a class="wall__open" href="#sponsors">Your Logo Here</a>
       </div>
     </div>
 
@@ -1025,15 +1024,14 @@ p{margin:0}
 <section class="section register reveal" id="register">
   <div class="wrap">
     <p class="kicker kicker--center">Registration</p>
-    <h2>Claim Your Ice Time</h2>
-    <p>Player registration and every sponsorship level are handled on the same page &mdash; you choose which one you are completing once you get there. Spots are limited by available ice &mdash; first paid, first confirmed.</p>
-    <p style="margin-top:.9rem">Players are encouraged to have <strong style="color:#000">current or past ice hockey experience</strong>
-    and bring <strong style="color:#000">full equipment</strong>. Games are 20-minute single periods under adult league rules.</p>
+    <h2>Registration Is Closed</h2>
+    <p>Player registration and sponsorship for the 2026 tournament closed on <strong style="color:#000">September 30</strong>. Thank you to every skater, goalie, and sponsor who signed up &mdash; rosters and jerseys are being finalized now.</p>
+    <p style="margin-top:.9rem">See you on the ice <strong style="color:#000">Thursday, November 12</strong> at Printscape Arena. Check-in opens at 7:30 AM.</p>
     <div class="register__cta">
-      <a class="btn btn--dark" href="#" data-link="player">Register as a Player</a>
-      <a class="btn btn--outline-dark" href="#sponsors">Choose a Sponsorship</a>
+      <a class="btn btn--dark" href="#schedule">Game Day Schedule</a>
+      <a class="btn btn--outline-dark" href="#contact">Get on the Odessa List</a>
     </div>
-    <p class="register__note" id="reg-note">Registration portal opens soon — email <a href="mailto:bladesofsteelcity@gmail.com">bladesofsteelcity@gmail.com</a> to be first in line.</p>
+    <p class="register__note" id="reg-note">Questions about your registration? Email <a href="mailto:bladesofsteelcity@gmail.com">bladesofsteelcity@gmail.com</a>.</p>
   </div>
 </section>
 
@@ -1092,6 +1090,12 @@ p{margin:0}
    To change the destination, edit this one line: */
 const REGISTRATION_URL = "https://marcellus-utica-gas.com/bladesofsteelcity";
 
+/* 2026 registration and sponsorship CLOSED Sept 30, 2026.
+   All "Register" / "Sponsor" buttons were replaced with closed states in
+   the HTML above. To reopen (e.g. for Odessa 2027): set this to true and
+   restore buttons with data-link="player" / "cup" / "icing" etc. */
+const REGISTRATION_OPEN = false;
+
 /* If a level ever needs its own separate link, replace REGISTRATION_URL
    on that line with a different web address in quotation marks. */
 const LINKS = {
@@ -1107,7 +1111,7 @@ const LINKS = {
 (function(){
   var buttons = document.querySelectorAll('[data-link]');
   buttons.forEach(function(a){
-    var url = LINKS[a.getAttribute('data-link')];
+    var url = REGISTRATION_OPEN ? LINKS[a.getAttribute('data-link')] : '';
     if (url) {
       a.setAttribute('href', url);
       a.setAttribute('target','_blank');
@@ -1121,7 +1125,7 @@ const LINKS = {
     }
   });
   var note = document.getElementById('reg-note');
-  if (note && LINKS.player) {
+  if (note && LINKS.player && REGISTRATION_OPEN) {
     note.textContent = 'Payment is processed securely by our registration partner.';
   }
 })();
