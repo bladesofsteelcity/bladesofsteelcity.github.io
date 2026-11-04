@@ -538,9 +538,9 @@ p{margin:0}
 
     <div class="hero__cta">
       <a class="btn btn--gold" href="https://marcellus-utica-gas.com/bladesofsteelcity" target="_blank" rel="noopener" data-link="fan">Register as a Fan &mdash; $30</a>
-      <a class="btn btn--ghost" href="#sponsors">Become a Sponsor</a>
+      <a class="btn btn--ghost" href="#partners">Meet Our Sponsors</a>
     </div>
-    <p class="hero__closed"><strong>Fans welcome</strong> &mdash; $30 includes lunch after the event. Player registration is closed; one final Icing sponsorship is open.</p>
+    <p class="hero__closed"><strong>Fans welcome</strong> &mdash; $30 includes lunch after the event. Player registration is closed and all sponsorships are sold out.</p>
   </div>
 </section>
 
@@ -864,7 +864,7 @@ p{margin:0}
     <p class="kicker">Sponsorship</p>
     <h2 style="font-size:var(--text-2xl);color:var(--white);max-width:16ch">Put Your Brand on the Boards.</h2>
     <p class="muted" style="margin-top:1rem;max-width:60ch">Sponsorship underwrites the ice, the jerseys, and the reception — which means more of every dollar raised reaches the nonprofits we support. Most levels include skater spots, so your team plays and your brand shows.</p>
-    <p class="muted" style="margin-top:.75rem;max-width:60ch"><strong style="color:var(--gold)">One Icing sponsorship left.</strong> Every other level is sold out. Icing checks out on the same registration page &mdash; select your sponsorship there.</p>
+    <p class="muted" style="margin-top:.75rem;max-width:60ch"><strong style="color:var(--gold)">All 2026 sponsorships are sold out.</strong> Thank you to every company that stepped up &mdash; see them all on the sponsor wall below.</p>
 
     <div class="tiers">
       <div class="tier tier--top">
@@ -937,7 +937,7 @@ p{margin:0}
         <div class="tier__name">Icing</div>
         <div class="tier__sub">Bar &amp; Food Sponsor</div>
         <div class="tier__price">$500</div>
-        <div class="tier__avail">1 available</div>
+        <div class="tier__avail" style="color:rgba(255,255,255,.6)">Sold out</div>
         <ul>
           <li>Logo displayed at the bar and food area</li>
           <li>Name on event shirt</li>
@@ -945,7 +945,7 @@ p{margin:0}
           <li>Social media shoutout</li>
         </ul>
         <div class="tier__foot">
-          <a class="btn btn--ghost btn--sm" href="https://marcellus-utica-gas.com/bladesofsteelcity" target="_blank" rel="noopener" data-link="icing">Sponsor This Level</a>
+          <span class="btn btn--closed btn--sm">Sponsorship Closed</span>
         </div>
       </div>
     </div>
@@ -1041,7 +1041,7 @@ p{margin:0}
     <div class="wall-group">
       <div class="wall-group__head">
         <span class="wall-group__name">Icing</span>
-        <span class="wall-group__amt">$500 &middot; 1 spot remaining</span>
+        <span class="wall-group__amt">$500 &middot; Sold out</span>
       </div>
       <div class="wall wall--sm">
         <a class="wall--wide" href="https://www.bakerhughes.com" target="_blank" rel="noopener" title="Baker Hughes">
@@ -1071,7 +1071,9 @@ p{margin:0}
         <a class="wall--wide wall--capped" href="https://horizontalwireline.com" target="_blank" rel="noopener" title="Horizontal Wireline Services">
           <img src="assets/sponsors/horizontal-wireline.png" alt="Horizontal Wireline Services">
         </a>
-        <a class="wall__open" href="#sponsors">Your Logo Here</a>
+        <a class="wall--wide wall--capped" href="https://www.eqt.com" target="_blank" rel="noopener" title="EQT">
+          <img src="assets/sponsors/eqt.png" alt="EQT" style="max-height:62px">
+        </a>
       </div>
     </div>
 
@@ -1093,12 +1095,12 @@ p{margin:0}
     <p class="kicker kicker--center">Registration</p>
     <h2>Fans Welcome. Lunch Included.</h2>
     <p><strong style="color:#000">Fan registration is $30 and includes lunch after the event.</strong> Bring a colleague, cheer on your company&rsquo;s team, and support the cause &mdash; Thursday, November 12 at Printscape Arena.</p>
-    <p style="margin-top:.9rem">Player registration closed on September 30. <strong style="color:#000">One final Icing sponsorship is still open.</strong></p>
+    <p style="margin-top:.9rem">Player registration closed on September 30. <strong style="color:#000">All 2026 sponsorships are sold out &mdash; thank you.</strong></p>
     <div class="register__cta">
       <a class="btn btn--dark" href="https://marcellus-utica-gas.com/bladesofsteelcity" target="_blank" rel="noopener" data-link="fan">Register as a Fan &mdash; $30</a>
-      <a class="btn btn--outline-dark" href="#sponsors">Claim the Last Icing Spot</a>
+      <a class="btn btn--outline-dark" href="#partners">Meet Our Sponsors</a>
     </div>
-    <p class="register__note" id="reg-note">Fan tickets and sponsorships are on the same registration page &mdash; choose which one you&rsquo;re completing once you get there. Questions? Email <a href="mailto:bladesofsteelcity@gmail.com">bladesofsteelcity@gmail.com</a>.</p>
+    <p class="register__note" id="reg-note">Fan tickets are $30 on the registration page and include lunch after the event. Questions? Email <a href="mailto:bladesofsteelcity@gmail.com">bladesofsteelcity@gmail.com</a>.</p>
   </div>
 </section>
 
@@ -1159,7 +1161,7 @@ const REGISTRATION_URL = "https://marcellus-utica-gas.com/bladesofsteelcity";
 
 /* OPEN vs CLOSED: a link set to "" is closed. Player registration and the
    top three sponsor levels closed Sept 30, 2026 (their buttons were replaced
-   with "Closed" labels in the HTML). Clean Sheet sold out Nov 2026. Fans and Icing are open. */
+   with "Closed" labels in the HTML). All sponsorships sold out Nov 2026. Only fan registration is open. */
 
 /* If a level ever needs its own separate link, replace REGISTRATION_URL
    on that line with a different web address in quotation marks. */
@@ -1170,7 +1172,7 @@ const LINKS = {
   crispy:  "",                 // Crispy Sweaters — $4,000 — sold out
   biscuit: "",                 // Biscuit Backer — $2,500 — sold out
   clean:   "",                 // Clean Sheet — $1,000 — sold out
-  icing:   REGISTRATION_URL    // Icing (Bar/Food) — $500 — OPEN
+  icing:   ""                  // Icing (Bar/Food) — $500 — sold out
 };
 
 /* --- wire every button to its link --- */
