@@ -642,6 +642,24 @@ h2{letter-spacing:-.045em}.mission h2{max-width:13ch}
 h2,.card h3{letter-spacing:.025em;word-spacing:.14em;line-height:1.12}
 .hero h1 em{letter-spacing:inherit;word-spacing:inherit}
 @media(max-width:760px){.hero h1{font-size:clamp(2.6rem,10.4vw,4.8rem)}}
+
+/* White tiles keep the existing team artwork legible against dark cards. */
+.result-logo {
+  display: grid;
+  place-items: center;
+  width: min(100%, 15rem);
+  height: 6.5rem;
+  margin-top: 1.25rem;
+  padding: .75rem 1rem;
+  background: #fff;
+}
+.result-logo img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 5rem;
+  object-fit: contain;
+}
 </style>
 </head>
 <body>
@@ -737,18 +755,30 @@ h2,.card h3{letter-spacing:.025em;word-spacing:.14em;line-height:1.12}
       <li class="card card--live">
         <span class="tag tag--gold">1st Place · Champion</span>
         <h3>Austin Hose</h3>
+        <div class="result-logo">
+          <img src="assets/sponsors/austin-hose.png" alt="" loading="lazy" decoding="async">
+        </div>
       </li>
       <li class="card">
         <span class="tag">2nd Place</span>
         <h3>CNX</h3>
+        <div class="result-logo">
+          <img src="assets/sponsors/cnx.png" alt="" loading="lazy" decoding="async">
+        </div>
       </li>
       <li class="card">
         <span class="tag">3rd Place</span>
         <h3>Deep Well Services</h3>
+        <div class="result-logo">
+          <img src="assets/sponsors/deep-well-services.png" alt="" loading="lazy" decoding="async">
+        </div>
       </li>
       <li class="card">
         <span class="tag">4th Place</span>
         <h3>NexTier</h3>
+        <div class="result-logo">
+          <img src="assets/sponsors/nextier.png" alt="" loading="lazy" decoding="async">
+        </div>
       </li>
     </ol>
   </div>
